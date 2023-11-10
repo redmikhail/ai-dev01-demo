@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - gradio-hftgi-rag-redis.yaml
   - hf-text-generation-inference-server-flan.yaml
+  - hf-text-generation-inference-server-mistral.yaml
