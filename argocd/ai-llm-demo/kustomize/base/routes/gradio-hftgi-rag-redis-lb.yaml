@@ -1,15 +1,17 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: tgis-server
+  name: llm-ui
+  labels:
+    app: gradio-hftgi-rag-redis
 spec:
   to:
     kind: Service
-    name: hf-text-generation-inference-server-flan
+    name: gradio-hftgi-rag-redis-flan
     weight: 50
   alternateBackends:
     - kind: Service
-      name: hf-text-generation-inference-server-mistral
+      name: gradio-hftgi-rag-redis-mistral
       weight: 50
   port:
     targetPort: http
