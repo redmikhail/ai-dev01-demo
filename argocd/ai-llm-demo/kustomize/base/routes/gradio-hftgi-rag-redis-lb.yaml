@@ -4,6 +4,8 @@ metadata:
   name: llm-ui
   labels:
     app: gradio-hftgi-rag-redis
+  annotations:
+    haproxy.router.openshift.io/balance: roundrobin
 spec:
   to:
     kind: Service
