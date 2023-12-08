@@ -10,11 +10,11 @@ spec:
   to:
     kind: Service
     name: gradio-hftgi-rag-redis-mistral
-    weight: 60
+    weight: 50
   alternateBackends:
     - kind: Service
       name: gradio-hftgi-rag-redis-flan
-      weight: 40
+      weight: 50
   port:
     targetPort: http
   tls:
